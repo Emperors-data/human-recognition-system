@@ -1,0 +1,87 @@
+# Human Recognition and Activity Understanding System Configuration
+
+# Detection Settings (YOLOv8-Pose)
+detection:
+  model: "yolov8n-pose"  # YOLOv8-Pose model (detects persons + keypoints)
+  confidence_threshold: 0.5
+  nms_iou_threshold: 0.45
+  device: "cpu"  # Changed to CPU (CUDA not available)
+
+# Face Recognition Settings (OpenCV LBPH)
+face_recognition:
+  confidence_threshold: 0.5  # 0-1, higher = stricter matching
+  model: "lbph"  # OpenCV LBPH Face Recognizer
+  face_database_path: "known_faces"
+  model_path: "face_recognizer_model.yml"
+
+# Pose Estimation Settings
+pose:
+  model_complexity: 1  # Options: 0 (lite), 1 (full), 2 (heavy)
+  min_detection_confidence: 0.5
+  min_tracking_confidence: 0.5
+  enable_segmentation: false
+  smooth_landmarks: true
+
+# Activity Classification Settings
+activity:
+  method: "rule_based"  # Options: rule_based, ml_based
+  smoothing_window: 5  # Number of frames for temporal smoothing
+  confidence_threshold: 0.6
+  supported_activities:
+    - "standing"
+    - "sitting"
+    - "walking"
+    - "sleeping"
+    - "using_phone"
+    - "writing"
+    - "talking"
+    - "unknown"
+
+# Tracking Settings
+tracking:
+  max_age: 30  # Maximum frames to keep track without detection
+  min_hits: 3  # Minimum detections before track is confirmed
+  iou_threshold: 0.3
+  max_iou_distance: 0.7
+  max_cosine_distance: 0.3
+  nn_budget: 100
+
+# Visualization Settings
+visualization:
+  show_bbox: true
+  show_skeleton: true
+  show_activity: true
+  show_face_name: true
+  show_fps: true
+  show_person_count: true
+  bbox_thickness: 2
+  skeleton_thickness: 2
+  font_scale: 0.6
+  font_thickness: 2
+  colors:
+    bbox: [0, 255, 0]  # Green
+    skeleton: [255, 0, 0]  # Blue
+    text: [255, 255, 255]  # White
+    unknown_person: [255, 165, 0]  # Orange
+
+# Input/Output Settings
+input:
+  camera_index: 0
+  video_path: "test_videos/your_video.mp4"  # Set to video file path or null for webcam
+  frame_width: 1280
+  frame_height: 720
+  fps: 30
+
+output:
+  save_video: false
+  output_path: "output/result.mp4"
+  save_screenshots: true
+  screenshot_path: "output/screenshots"
+  display_window: true
+  window_name: "Human Recognition System"
+
+# Performance Settings
+performance:
+  skip_frames: 0  # Process every Nth frame (0 = process all)
+  resize_factor: 1.0  # Resize input frame (1.0 = no resize)
+  max_persons: 10  # Maximum number of persons to track
