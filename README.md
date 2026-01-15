@@ -241,7 +241,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## 👨‍💻 Author
 
 **Your Name**
-- GitHub: [@YOUR_USERNAME](https://github.com/YOUR_USERNAME)
+- GitHub: [Emperors_data](https://github.com/Emperors-data)
 
 ## 🙏 Acknowledgments
 
@@ -251,7 +251,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📧 Contact
 
-For questions or suggestions, please open an issue or contact [your.email@example.com](mailto:your.email@example.com)
+For questions or suggestions, please open an issue or contact [harshalmhetar@gmail.com](mailto:your.email@example.com)
 
 ---
 
