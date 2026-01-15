@@ -11,7 +11,7 @@ A real-time computer vision system for detecting, tracking, and analyzing human 
 
 ### Live Detection
 
-![System Demo](screenshots/demo.jpg)
+`demo.jpg`
 
 *Real-time person detection with face recognition, pose estimation, and activity classification*
 
@@ -26,7 +26,7 @@ A real-time computer vision system for detecting, tracking, and analyzing human 
 
 ### Video Demo
 
-📹 **Processed Video**: Check `demo/demo_video.mp4` for a full demonstration of the system processing a video file.
+📹 **Processed Video**: Check `demo_video.mp4` for a full demonstration of the system processing a video file.
 
 ## 🎯 Features
 
