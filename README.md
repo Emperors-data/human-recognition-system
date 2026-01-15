@@ -7,6 +7,27 @@ A real-time computer vision system for detecting, tracking, and analyzing human 
 ![YOLOv8](https://img.shields.io/badge/YOLOv8-pose-orange.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
+## 📸 Demo
+
+### Live Detection
+
+![System Demo](screenshots/demo.jpg)
+
+*Real-time person detection with face recognition, pose estimation, and activity classification*
+
+### Features Showcase
+
+- ✅ **Person Detection** - Accurate bounding boxes around detected persons
+- ✅ **Face Recognition** - Instant name identification (Harshal shown in demo)
+- ✅ **Pose Skeleton** - 17-keypoint skeleton overlay
+- ✅ **Activity Classification** - Real-time activity labels
+- ✅ **FPS Counter** - Performance monitoring
+- ✅ **Multi-Person Support** - Tracks multiple people simultaneously
+
+### Video Demo
+
+📹 **Processed Video**: Check `demo/demo_video.mp4` for a full demonstration of the system processing a video file.
+
 ## 🎯 Features
 
 - **Real-time Person Detection** - YOLOv8-Pose for fast and accurate detection
